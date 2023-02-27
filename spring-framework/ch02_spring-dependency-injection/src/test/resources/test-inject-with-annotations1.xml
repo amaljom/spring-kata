@@ -21,7 +21,22 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
 
+    <bean id="vehicle" class="bnymellon.training.spring.framework.model.Vehicle">
+
+        <!-- note the "property" entity -->
+        <property name="year" value="2017"/>
+        <property name="type" value="car"/>
+    </bean>
+
+    <bean id="setterAnnotatedBulkVehicleOrder" class="bnymellon.training.spring.framework.model.SetterAnnotatedBulkVehicleOrder">
+
+        <!-- Notice the lack of referring to the ColoredShape in this bean -->
+
+        <property name="quantity" value="1"/>
+
+    </bean>
 <!-- create right configuration to pass the tests -->
 
 

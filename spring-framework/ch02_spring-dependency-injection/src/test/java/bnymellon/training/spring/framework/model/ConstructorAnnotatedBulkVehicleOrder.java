@@ -16,6 +16,8 @@
 
 package bnymellon.training.spring.framework.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 // TODO: Fix this class to Autowire using a constructor
 public class ConstructorAnnotatedBulkVehicleOrder {
 
@@ -37,7 +39,7 @@ public class ConstructorAnnotatedBulkVehicleOrder {
     public Vehicle getVehicle() {
         return vehicle;
     }
-
+    @Autowired
     public void setVehicle(final Vehicle vehicle) {
         this.vehicle = vehicle;
     }

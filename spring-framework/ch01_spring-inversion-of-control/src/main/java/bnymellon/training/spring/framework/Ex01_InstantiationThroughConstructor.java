@@ -25,12 +25,13 @@ public class Ex01_InstantiationThroughConstructor {
     public static void main(String args[]) {
 
         // XML based config loading
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext(
-                        "ex01-instantiation-through-constructor.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ex01-instantiation-through-constructor.xml");
 
         ColoredShape coloredShapeBean = (ColoredShape) context.getBean("coloredShapeBean");
+//        ColoredShape coloredShapeBean = (ColoredShape) context.getBean("coloredShapeBean", ColoredShape.class);
+
 
         System.out.println(coloredShapeBean.toString());
+//        System.out.println(coloredShapeBean);
     }
 }
